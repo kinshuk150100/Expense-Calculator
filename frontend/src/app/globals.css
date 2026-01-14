@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Prevent select dropdowns from expanding beyond container */
+select {
+  max-height: 42px;
+  overflow: hidden;
+}
+
+/* Style select dropdown options - note: native dropdown height is browser-controlled */
+select option {
+  padding: 8px 12px;
+  background-color: white;
+}
+
+/* Ensure select maintains normal height when closed */
+select:not([multiple]) {
+  height: auto;
+  min-height: 42px;
+}
+
+/* Remove default browser styling for better control */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}

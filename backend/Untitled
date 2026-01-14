@@ -1,0 +1,13 @@
+Create an endpoint:
+
+POST /ai/insights
+
+Input: list of expenses
+Output: AI-generated insights like:
+- overspending categories
+- savings suggestions
+
+Use OpenAI API if available.
+If API key is missing, return mock AI response.
+
+Keep code clean and well-commented.
